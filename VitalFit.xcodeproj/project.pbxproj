@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8945AC622AD7D7FD001CCE76 /* VitalFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC612AD7D7FD001CCE76 /* VitalFitApp.swift */; };
-		8945AC642AD7D7FD001CCE76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC632AD7D7FD001CCE76 /* ContentView.swift */; };
 		8945AC662AD7D7FE001CCE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945AC652AD7D7FE001CCE76 /* Assets.xcassets */; };
 		8945AC692AD7D7FE001CCE76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8945AC682AD7D7FE001CCE76 /* Preview Assets.xcassets */; };
 		8945AC732AD7D7FE001CCE76 /* VitalFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC722AD7D7FE001CCE76 /* VitalFitTests.swift */; };
 		8945AC7D2AD7D7FE001CCE76 /* VitalFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC7C2AD7D7FE001CCE76 /* VitalFitUITests.swift */; };
 		8945AC7F2AD7D7FE001CCE76 /* VitalFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC7E2AD7D7FE001CCE76 /* VitalFitUITestsLaunchTests.swift */; };
 		8945AC8F2AD7D82A001CCE76 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945AC8E2AD7D82A001CCE76 /* ExerciseModel.swift */; };
+		8969FEE62AD7E785009AD3C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969FEE52AD7E785009AD3C2 /* HomeView.swift */; };
+		8969FEE82AD7E7F5009AD3C2 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969FEE72AD7E7F5009AD3C2 /* ExerciseListView.swift */; };
+		8969FEEA2AD7E813009AD3C2 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969FEE92AD7E813009AD3C2 /* ViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		8945AC5E2AD7D7FD001CCE76 /* VitalFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitalFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8945AC612AD7D7FD001CCE76 /* VitalFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalFitApp.swift; sourceTree = "<group>"; };
-		8945AC632AD7D7FD001CCE76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8945AC652AD7D7FE001CCE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8945AC682AD7D7FE001CCE76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8945AC6E2AD7D7FE001CCE76 /* VitalFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitalFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +47,9 @@
 		8945AC7C2AD7D7FE001CCE76 /* VitalFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalFitUITests.swift; sourceTree = "<group>"; };
 		8945AC7E2AD7D7FE001CCE76 /* VitalFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8945AC8E2AD7D82A001CCE76 /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
+		8969FEE52AD7E785009AD3C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8969FEE72AD7E7F5009AD3C2 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
+		8969FEE92AD7E813009AD3C2 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +100,10 @@
 		8945AC602AD7D7FD001CCE76 /* VitalFit */ = {
 			isa = PBXGroup;
 			children = (
-				8945AC8D2AD7D81E001CCE76 /* Views */,
-				8945AC8C2AD7D819001CCE76 /* View Models */,
 				8945AC8B2AD7D811001CCE76 /* Models */,
+				8945AC8C2AD7D819001CCE76 /* View Models */,
+				8945AC8D2AD7D81E001CCE76 /* Views */,
 				8945AC612AD7D7FD001CCE76 /* VitalFitApp.swift */,
-				8945AC632AD7D7FD001CCE76 /* ContentView.swift */,
 				8945AC652AD7D7FE001CCE76 /* Assets.xcassets */,
 				8945AC672AD7D7FE001CCE76 /* Preview Content */,
 			);
@@ -150,6 +153,9 @@
 		8945AC8D2AD7D81E001CCE76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8969FEE52AD7E785009AD3C2 /* HomeView.swift */,
+				8969FEE92AD7E813009AD3C2 /* ViewModifiers.swift */,
+				8969FEE72AD7E7F5009AD3C2 /* ExerciseListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8945AC642AD7D7FD001CCE76 /* ContentView.swift in Sources */,
+				8969FEEA2AD7E813009AD3C2 /* ViewModifiers.swift in Sources */,
+				8969FEE82AD7E7F5009AD3C2 /* ExerciseListView.swift in Sources */,
+				8969FEE62AD7E785009AD3C2 /* HomeView.swift in Sources */,
 				8945AC8F2AD7D82A001CCE76 /* ExerciseModel.swift in Sources */,
 				8945AC622AD7D7FD001CCE76 /* VitalFitApp.swift in Sources */,
 			);

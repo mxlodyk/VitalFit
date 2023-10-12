@@ -11,7 +11,9 @@ import SwiftUI
 struct VitalFitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView { // Ensures that the entire application is in a Navigation View.
+                HomeView()
+            }
         }
     }
 }
