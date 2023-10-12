@@ -17,6 +17,8 @@ struct ButtonViewModifier: ViewModifier {
             .background(Color(themeColour))
             .cornerRadius(10)
             .shadow(radius: 10)
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
     }
 }
 
@@ -35,6 +37,8 @@ struct TextFieldViewModifier : ViewModifier {
             .frame(height: 55)
             .background(Color(hue: 0.591, saturation: 0.155, brightness: 0.98))
             .cornerRadius(10)
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
     }
 }
 

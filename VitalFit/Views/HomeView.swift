@@ -13,13 +13,10 @@ struct HomeView: View {
                     .withButtonFormatting()
             }
         }
-        .padding()
         .padding(.bottom, 600)
     }
 }
 
 #Preview {
-    NavigationView {
         HomeView()
-    }
 }

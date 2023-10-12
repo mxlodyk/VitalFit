@@ -1,5 +1,5 @@
 //  ExerciseModel.swift
-//  Fitness
+//  VitalFit
 //  Created by Melody Flavel on 11/10/2023.
 
 import Foundation
