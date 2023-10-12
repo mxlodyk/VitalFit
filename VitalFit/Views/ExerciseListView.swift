@@ -14,7 +14,7 @@ struct ExerciseListView: View {
                 .padding(.bottom, 20)
             VStack (spacing: 5) {
                 ForEach(exerciseListViewModel.exercises) { exercise in
-                        ExerciseListRowView(exerciseName: exercise.name)
+                    ExerciseListRowView(exerciseName: exercise.name, exerciseID: exercise.id)
                 }
                     .onDelete(perform: exerciseListViewModel.deleteExercise)
                     .onMove(perform: exerciseListViewModel.moveExercise)

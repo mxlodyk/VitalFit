@@ -8,12 +8,15 @@ var exercise1 = ExerciseModel(name: "Hip Thrusts", repetitions: "12", sets: "4",
 
 struct ExerciseListRowView: View {
     
+    @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     let exerciseName: String
+    @State var exerciseID: String
     
     var body: some View {
             HStack {
-                NavigationLink(destination: ExerciseView()){
+                NavigationLink(destination: ExerciseView(exerciseID: $exerciseID)){
                     Text(exerciseName)
+                    //Text(exerciseID)
                     .withButtonFormatting()
             }
         }
@@ -22,6 +25,7 @@ struct ExerciseListRowView: View {
 }
 
 #Preview {
-    ExerciseListRowView(exerciseName: exercise1.name)
+    ExerciseListRowView(exerciseName: exercise1.name, exerciseID: exercise1.id)
+        .environmentObject(ExerciseListViewModel())
 }
 
