@@ -1,0 +1,6 @@
+## Data Flow
+The 'HomeView' view contains a 'Programs' NavigationLink with a destination of 'ProgramListView()'.
+The 'ProgramListView' view declares an instance of the 'ProgramListViewModel' and iterates through the 'programs' in this instance. It calls the 'ProgramListRowView' view and passes through each 'program.name' and 'program.id'.
+The 'ProgramListRowView' view declares a @State 'programID'. It contains a NavigationLink with a destination of 'ProgramView' that takes the '$programID' as an argument.
+
+

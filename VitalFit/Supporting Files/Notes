@@ -1,0 +1,7 @@
+'ObservableObject' is a protocol used to create a class whose properties can be observed by SwiftUI views. When properties of an observable object change, the views that depend on these properties automatically update to reflect the new data.
+
+@Published is a property wrapper used in combination with the 'Observable Object' protocol. It automatically notifies any observers when the value of the wrapped property changes.
+
+@State is a property wrapper used to declare state variables within a view which are both mutable and can trigger view updates when their values change. It's primary purpose is to manage a view's local state, ensuring that the view reflects the current state of the data it depends on.
+
+@EnvironmentObject is a property wrapper used to share data across multiple views in a SwiftUI app. It allows you to inject an observable object into the environment, making it accessible to any view within the environment hierarchy that declares a dependency on it.
