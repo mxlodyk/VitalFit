@@ -6,11 +6,11 @@ import SwiftUI
 
 struct AddProgramView: View {
     
-    @State private var navigateToWorkoutList = false
+    @State private var navigateToNewProgramView = false
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var programListViewModel: ProgramListViewModel
-    @State var textFieldText: String = ""
+    @State var newProgramName: String = ""
     @State var programName: String = ""
     //@EnvironmentObject var programModel: ProgramModel
     @State var newProgram = ProgramModel(name: "", workouts: [])
@@ -18,14 +18,14 @@ struct AddProgramView: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("Type something here...", text: $textFieldText)
+                TextField("Type something here...", text: $newProgramName)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(Color(themeColour))
                     .cornerRadius(10)
                 Button(action: {
                     saveButtonPressed()
-                    navigateToWorkoutList = true
+                    navigateToNewProgramView = true
                 }) {
                     Text("Next".uppercased())
                         .foregroundColor(.white)
@@ -36,7 +36,7 @@ struct AddProgramView: View {
                         .cornerRadius(10)
                 }
                 
-                NavigationLink(destination: NewWorkoutListView(newProgram: $newProgram), isActive: $navigateToWorkoutList) {
+                NavigationLink(destination: NewProgramView(newProgram: newProgram), isActive: $navigateToNewProgramView) {
                                     EmptyView()
                                 }
             }
@@ -45,9 +45,9 @@ struct AddProgramView: View {
         .navigationTitle("Add a Program")
     }
     func saveButtonPressed() {
-        newProgram = ProgramModel(name: textFieldText, workouts: [])
-        @State var newWorkoutListViewModel: WorkoutListViewModel
-        programListViewModel.addProgram(programModel: newProgram)
+        newProgram = ProgramModel(name: newProgramName, workouts: [])
+        DataProvider.addProgram(programModel: newProgram)
+        //@State var newWorkoutListViewModel: WorkoutListViewModel
         //presentationMode.wrappedValue.dismiss()
         //presentationMode.wrappedValue.dismiss()
     }

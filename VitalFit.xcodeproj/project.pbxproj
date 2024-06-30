@@ -37,6 +37,8 @@
 		897721622C099E8600DED12E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897721612C099E8600DED12E /* SettingsView.swift */; };
 		897721642C09AA2100DED12E /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 897721632C09AA2100DED12E /* Tasks */; };
 		897721662C0A7B8D00DED12E /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 897721652C0A7B8D00DED12E /* Notes */; };
+		898F69822C30ED5600CA5952 /* NewProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F69812C30ED5500CA5952 /* NewProgramView.swift */; };
+		898F69842C30F43F00CA5952 /* NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F69832C30F43F00CA5952 /* NewWorkoutView.swift */; };
 		899B765E2C0C30270088FE9A /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B765D2C0C30270088FE9A /* WorkoutListView.swift */; };
 		899B76602C0C30E60088FE9A /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899B765F2C0C30E60088FE9A /* ExerciseListView.swift */; };
 		899B76652C0D27A10088FE9A /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = 899B76642C0D27A10088FE9A /* Documentation */; };
@@ -95,6 +97,8 @@
 		897721612C099E8600DED12E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		897721632C09AA2100DED12E /* Tasks */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
 		897721652C0A7B8D00DED12E /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		898F69812C30ED5500CA5952 /* NewProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProgramView.swift; sourceTree = "<group>"; };
+		898F69832C30F43F00CA5952 /* NewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutView.swift; sourceTree = "<group>"; };
 		899B765D2C0C30270088FE9A /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		899B765F2C0C30E60088FE9A /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		899B76642C0D27A10088FE9A /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = text; path = Documentation; sourceTree = "<group>"; };
@@ -213,20 +217,22 @@
 				8977215F2C09975300DED12E /* Extensions.swift */,
 				897721612C099E8600DED12E /* SettingsView.swift */,
 				8969FEE52AD7E785009AD3C2 /* HomeView.swift */,
+				893926192C067C8C003B575B /* ProgramListView.swift */,
 				8969FEE72AD7E7F5009AD3C2 /* NewExerciseListView.swift */,
 				899B765F2C0C30E60088FE9A /* ExerciseListView.swift */,
 				8969FEEF2AD7EA5D009AD3C2 /* ExerciseListRowView.swift */,
 				8969FEF12AD7EE8E009AD3C2 /* ExerciseView.swift */,
 				8969FEED2AD7EA43009AD3C2 /* AddExerciseView.swift */,
-				893926192C067C8C003B575B /* ProgramListView.swift */,
 				8939261D2C067D30003B575B /* ProgramListRowView.swift */,
 				893926202C067DD1003B575B /* ProgramView.swift */,
 				893926282C067E5C003B575B /* AddProgramView.swift */,
+				898F69812C30ED5500CA5952 /* NewProgramView.swift */,
 				893926172C067C7B003B575B /* NewWorkoutListView.swift */,
 				899B765D2C0C30270088FE9A /* WorkoutListView.swift */,
 				8977215D2C0693B800DED12E /* WorkoutListRowView.swift */,
 				893926262C067E47003B575B /* WorkoutView.swift */,
 				8939262A2C067E7C003B575B /* AddWorkoutView.swift */,
+				898F69832C30F43F00CA5952 /* NewWorkoutView.swift */,
 				899B76682C0D383A0088FE9A /* TestView.swift */,
 			);
 			path = Views;
@@ -389,9 +395,11 @@
 				8969FEE82AD7E7F5009AD3C2 /* NewExerciseListView.swift in Sources */,
 				8969FEF22AD7EE8E009AD3C2 /* ExerciseView.swift in Sources */,
 				899B76672C0D2C920088FE9A /* DataProvider.swift in Sources */,
+				898F69842C30F43F00CA5952 /* NewWorkoutView.swift in Sources */,
 				897721602C09975300DED12E /* Extensions.swift in Sources */,
 				8977215A2C0687A900DED12E /* WorkoutListViewModel.swift in Sources */,
 				8969FEF02AD7EA5D009AD3C2 /* ExerciseListRowView.swift in Sources */,
+				898F69822C30ED5600CA5952 /* NewProgramView.swift in Sources */,
 				893926292C067E5C003B575B /* AddProgramView.swift in Sources */,
 				893926272C067E47003B575B /* WorkoutView.swift in Sources */,
 				893926252C067E37003B575B /* WorkoutModel.swift in Sources */,

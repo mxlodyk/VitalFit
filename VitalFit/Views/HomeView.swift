@@ -16,8 +16,6 @@ struct HomeView: View { // Declare a structure named 'HomeView' that conforms to
                     NavigationLink(destination: ProgramListView()) {
                         Text("Programs")
                             .withButtonFormatting()
-                        /*NavigationLink(destination: TestView()){ // TestView.
-                            Text("Test")*/
                     }
                 }
         }

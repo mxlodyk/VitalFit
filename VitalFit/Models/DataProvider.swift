@@ -9,7 +9,7 @@ struct DataProvider {
     static var programs: [ProgramModel] = []
     
     static func getPrograms() -> [ProgramModel] {
-        if programs.isEmpty {// NL
+        if programs.isEmpty {
             var program1 = ProgramModel(name: "Melody's Program", workouts: [])
             program1.workouts = [
                 WorkoutModel(name: "Glutes", exercises: []),
@@ -52,8 +52,8 @@ struct DataProvider {
         programs.append(programModel)
     }
     
-    //static func addWorkout(targetProgram: ProgramModel, name: String) {
-     //   targetProgram.workouts.append(WorkoutModel(name: name, exercises: []))
-    //}
+    static func addWorkout(targetProgram: inout ProgramModel, workoutModel: WorkoutModel) {
+        targetProgram.workouts.append(workoutModel)
+    }
     
 }
