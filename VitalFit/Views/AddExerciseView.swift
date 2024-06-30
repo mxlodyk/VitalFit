@@ -4,10 +4,16 @@
 
 import SwiftUI
 
+var program4 = ProgramModel(name: "Big 4", workouts: workouts1) // Preview
+var workout4 = WorkoutModel(name: "Legs", exercises: []) // Preview
+
 struct AddExerciseView: View {
     
+    @State private var navigateToNewWorkoutView = false
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
+    @Binding var newProgram: ProgramModel
+    @Binding var newWorkout: WorkoutModel
     
     @State var textFieldText0: String = ""
     @State var textFieldText1: String = ""
@@ -75,20 +81,29 @@ struct AddExerciseView: View {
                         .padding(.leading, 20)
                         .padding(.trailing, 20)
                 })
+                NavigationLink(destination: TestView(), isActive: $navigateToNewWorkoutView){
+                    EmptyView()
+                }
             }
             .navigationTitle("Add Exercise")
         }
     }
     
     func saveButtonPressed() {
-        exerciseListViewModel.addExercise(name: textFieldText0, repetitions: textFieldText1, sets: textFieldText2, weight: textFieldText3, rest: textFieldText4)
-        presentationMode.wrappedValue.dismiss()
+        //let workoutName = newWorkout.name
+        let workoutID = newWorkout.id
+        let programID = newProgram.id
+        let newExercise = ExerciseModel(name: textFieldText0, repetitions: textFieldText1, sets: textFieldText2, weight: textFieldText3, rest: textFieldText4)
+        
+        DataProvider.addExercise(programID: programID, workoutID: workoutID, exerciseModel: newExercise)
+        //exerciseListViewModel.addExercise(name: textFieldText0, repetitions: textFieldText1, sets: textFieldText2, weight: textFieldText3, rest: textFieldText4)
+        navigateToNewWorkoutView = true
     }
 }
 
-#Preview {
+/*#Preview {
     NavigationView{
-        AddExerciseView()
+        AddExerciseView(newProgram: program4, newWorkout: workout4)
     }
     .environmentObject(ExerciseListViewModel())
-}
+}*/

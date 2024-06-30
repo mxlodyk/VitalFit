@@ -48,12 +48,28 @@ struct DataProvider {
         return programs
     }
     
-    static func addProgram(programModel: ProgramModel) {
+    static func addProgram(programModel: inout ProgramModel) {
         programs.append(programModel)
     }
     
-    static func addWorkout(targetProgram: inout ProgramModel, workoutModel: WorkoutModel) {
-        targetProgram.workouts.append(workoutModel)
+    static func addWorkout(programID: String, workoutModel: WorkoutModel) {
+        if let index = programs.firstIndex(where: { $0.id == programID }) {
+            // Append the workout to the found program's workouts array
+            programs[index].workouts.append(workoutModel)
+        } else {
+            print("Program with ID \(programID) not found")
+        }
     }
     
+    static func addExercise(programID: String, workoutID: String, exerciseModel: ExerciseModel) {
+        if let program = programs.firstIndex(where: { $0.id == programID }) {
+            // Append the workout to the found program's workouts array
+            if let workout = programs[program].workouts.firstIndex(where: { $0.id == workoutID}) {
+                programs[program].workouts[workout].exercises.append(exerciseModel)
+            } else {
+                print("Program with ID \(programID) not found")
+            }
+        }
+        
+    }
 }

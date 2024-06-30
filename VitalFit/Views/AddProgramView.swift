@@ -36,7 +36,7 @@ struct AddProgramView: View {
                         .cornerRadius(10)
                 }
                 
-                NavigationLink(destination: NewProgramView(newProgram: newProgram), isActive: $navigateToNewProgramView) {
+                NavigationLink(destination: NewProgramView(newProgram: $newProgram), isActive: $navigateToNewProgramView) {
                                     EmptyView()
                                 }
             }
@@ -46,7 +46,7 @@ struct AddProgramView: View {
     }
     func saveButtonPressed() {
         newProgram = ProgramModel(name: newProgramName, workouts: [])
-        DataProvider.addProgram(programModel: newProgram)
+        DataProvider.addProgram(programModel: &newProgram)
         //@State var newWorkoutListViewModel: WorkoutListViewModel
         //presentationMode.wrappedValue.dismiss()
         //presentationMode.wrappedValue.dismiss()

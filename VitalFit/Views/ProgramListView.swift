@@ -19,7 +19,6 @@ struct ProgramListView: View {
                     VStack (spacing: 5) {
                         ForEach(DataProvider.programs) { program in
                             ProgramListRowView(programName: program.name, programID: program.id)
-                            //Text("\(program.id)")
                         }
                         .onDelete(perform: programListViewModel.deleteProgram)
                         .onMove(perform: programListViewModel.moveProgram)

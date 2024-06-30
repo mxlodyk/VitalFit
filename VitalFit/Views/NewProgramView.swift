@@ -11,7 +11,7 @@ var program2 = ProgramModel(name: "Big 4", workouts: workouts1) // Preview
 
 struct NewProgramView: View {
     
-    @State var newProgram: ProgramModel
+    @Binding var newProgram: ProgramModel
     
     var body: some View {
         ZStack {
@@ -49,6 +49,6 @@ struct NewProgramView: View {
     }
 }
 
-#Preview {
+/*#Preview {
     NewProgramView(newProgram: program2)
-}
+}*/

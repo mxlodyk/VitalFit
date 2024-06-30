@@ -39,7 +39,7 @@ struct AddWorkoutView: View {
                         .cornerRadius(10)
                 }
                 
-                NavigationLink(destination: NewWorkoutView(newProgram: newProgram), isActive: $navigateToExerciseList) {
+                NavigationLink(destination: NewWorkoutView(newProgram: newProgram, newWorkout: $newWorkout), isActive: $navigateToExerciseList) {
                                     EmptyView()
                                 }
             }
@@ -48,10 +48,12 @@ struct AddWorkoutView: View {
         .navigationTitle("Add a Workout")
     }
     func saveButtonPressed() {
+        let programID = newProgram.id
         newWorkout = WorkoutModel(name: textFieldText, exercises: [])
-        DataProvider.addWorkout(targetProgram: &newProgram, workoutModel: newWorkout)
+        //newProgram.workouts.append(newWorkout)
+        DataProvider.addWorkout(programID: programID, workoutModel: newWorkout)
         //var newWorkoutListViewModel = WorkoutListViewModel.createNewWorkoutListViewModel()
-        workoutListViewModel.addWorkout(newWorkout: newWorkout)
+        //workoutListViewModel.addWorkout(newWorkout: newWorkout)
         //presentationMode.wrappedValue.dismiss()
     }
 }

@@ -4,10 +4,15 @@
 
 import SwiftUI
 
+var program5 = ProgramModel(name: "Big 4", workouts: workouts1) // Preview
+var workout5 = WorkoutModel(name: "Legs", exercises: []) // Preview
+
 struct NewExerciseListView: View {
     
     @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State var newProgram: ProgramModel
+    @State var newWorkout: WorkoutModel
     
     var body: some View {
         ScrollView {
@@ -23,7 +28,7 @@ struct NewExerciseListView: View {
         .navigationBarItems(
             leading: EditButton(),
             trailing:
-                NavigationLink("Add", destination: AddExerciseView())
+                NavigationLink("Add", destination: AddExerciseView(newProgram: $newProgram, newWorkout: $newWorkout))
         )
         NavigationLink(destination: WorkoutListView()) {
             Text("Done")
@@ -39,7 +44,7 @@ struct NewExerciseListView: View {
 
 #Preview {
     NavigationView{
-        NewExerciseListView()
+        NewExerciseListView(newProgram: program5, newWorkout: workout5)
             .environmentObject(ExerciseListViewModel())
     }
 }
