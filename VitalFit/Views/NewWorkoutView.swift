@@ -50,21 +50,24 @@ struct NewWorkoutView: View {
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 30, height: 30)
                                 },
-                            trailing: Image("EditIcon")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                            trailing:
+                                NavigationLink(destination: ProgramListView()) {
+                                Image("CheckIcon")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 30, height: 30)
+                            }
                         )
-                        Spacer()
-                    NavigationLink(destination: AddExerciseView(newProgram: $newProgram, newWorkout: $newWorkout)) {
-                            Image("AddIcon")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 80, height: 80)
                         }
+                Spacer()
+                NavigationLink(destination: AddExerciseView(newProgram: $newProgram, newWorkout: $newWorkout)) {
+                        Image("AddIcon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
                     }
                 }
-            }
+            } // Zstack ends
     }
 }
     
