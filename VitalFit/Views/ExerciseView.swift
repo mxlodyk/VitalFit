@@ -8,9 +8,10 @@ var exercise2 = ExerciseModel(name: "Hip Thrusts", repetitions: "12", sets: "4",
 
 struct ExerciseView: View {
     
+    @Binding var exerciseID: String
     @Binding var programID: String
     @Binding var workoutID: String
-    @Binding var exerciseID: String
+    //@Binding var exerciseID: String
     //@EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     
     var body: some View {

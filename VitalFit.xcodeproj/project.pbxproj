@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		893926182C067C7B003B575B /* NewWorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893926172C067C7B003B575B /* NewWorkoutListView.swift */; };
 		8939261A2C067C8C003B575B /* ProgramListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893926192C067C8C003B575B /* ProgramListView.swift */; };
 		8939261E2C067D30003B575B /* ProgramListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939261D2C067D30003B575B /* ProgramListRowView.swift */; };
 		893926212C067DD1003B575B /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893926202C067DD1003B575B /* ProgramView.swift */; };
@@ -63,7 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		893926172C067C7B003B575B /* NewWorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutListView.swift; sourceTree = "<group>"; };
 		893926192C067C8C003B575B /* ProgramListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView.swift; sourceTree = "<group>"; };
 		8939261D2C067D30003B575B /* ProgramListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListRowView.swift; sourceTree = "<group>"; };
 		893926202C067DD1003B575B /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				893926202C067DD1003B575B /* ProgramView.swift */,
 				893926282C067E5C003B575B /* AddProgramView.swift */,
 				898F69812C30ED5500CA5952 /* NewProgramView.swift */,
-				893926172C067C7B003B575B /* NewWorkoutListView.swift */,
 				899B765D2C0C30270088FE9A /* WorkoutListView.swift */,
 				8977215D2C0693B800DED12E /* WorkoutListRowView.swift */,
 				893926262C067E47003B575B /* WorkoutView.swift */,
@@ -386,7 +383,6 @@
 				893926232C067E2D003B575B /* ProgramModel.swift in Sources */,
 				8969FEEC2AD7E9AB009AD3C2 /* ExerciseListViewModel.swift in Sources */,
 				8969FEEA2AD7E813009AD3C2 /* ViewModifiers.swift in Sources */,
-				893926182C067C7B003B575B /* NewWorkoutListView.swift in Sources */,
 				899B76602C0C30E60088FE9A /* ExerciseListView.swift in Sources */,
 				8977215E2C0693B800DED12E /* WorkoutListRowView.swift in Sources */,
 				8969FEF22AD7EE8E009AD3C2 /* ExerciseView.swift in Sources */,

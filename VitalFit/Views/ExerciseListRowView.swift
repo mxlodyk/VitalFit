@@ -4,8 +4,6 @@
 
 import SwiftUI
 
-var exercise1 = ExerciseModel(name: "HIP THRUST", repetitions: "12", sets: "4", weight: "50", rest: "1")
-
 struct ExerciseListRowView: View {
     
     @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
@@ -16,7 +14,7 @@ struct ExerciseListRowView: View {
     
     var body: some View {
             HStack {
-                NavigationLink(destination: ExerciseView(programID: $programID, workoutID: $workoutID, exerciseID: $exerciseID)){
+                NavigationLink(destination: ExerciseView(exerciseID: $exerciseID, programID: $programID, workoutID: $workoutID)){
                     Text(exerciseName)
                     .withButtonFormatting()
             }

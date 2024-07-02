@@ -31,6 +31,6 @@ struct WorkoutListRowView: View {
 }
 
 /*#Preview {
-    WorkoutListRowView(workoutName: workout1.name, workoutID: workout1.id, programID: <#Binding<String>#>)
+    WorkoutListRowView(workoutName: workout1.name, workoutID: workout1.id, programID: )
         .environmentObject(WorkoutListViewModel())
 }*/

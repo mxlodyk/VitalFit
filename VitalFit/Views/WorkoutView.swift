@@ -27,7 +27,7 @@ struct WorkoutView: View {
                                 ForEach(program.workouts) { workout in
                                     if workout.id == workoutID {
                                         ForEach(workout.exercises) { exercise in
-                                            WorkoutListRowView(workoutName: workout.name, workoutID: workout.id, programID: $programID)
+                                            ExerciseListRowView(exerciseName: exercise.name, exerciseID: exercise.id, programID: $programID, workoutID: $workoutID)
                                         }
                                     }
                                 }
