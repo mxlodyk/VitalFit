@@ -11,7 +11,6 @@ var workout1 = WorkoutModel(name: "Legs", exercises: [])
 
 struct WorkoutListRowView: View {
     
-    @EnvironmentObject var workoutListViewModel: WorkoutListViewModel
     let workoutName: String
     @State var workoutID: String
     @Binding var programID: String
@@ -21,7 +20,7 @@ struct WorkoutListRowView: View {
     
     var body: some View {
         HStack {
-            NavigationLink(destination: WorkoutView(workoutID: $workoutID, programID: $programID)){
+            NavigationLink(destination: ExerciseListView(workoutID: $workoutID, programID: $programID)){
                 Text(workoutName)
                 .withButtonFormatting()
         }

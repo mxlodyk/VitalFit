@@ -11,7 +11,6 @@ struct AddExerciseView: View {
     
     @State private var navigateToNewWorkoutView = false
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     @Binding var newProgram: ProgramModel
     @Binding var newWorkout: WorkoutModel
     

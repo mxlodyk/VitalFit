@@ -9,14 +9,13 @@ var program1 = ProgramModel(name: "Big 4", workouts: workouts1) // Preview
 
 struct ProgramListRowView: View {
     
-    @EnvironmentObject var programListViewModel: ProgramListViewModel
     let programName: String
     @State var programID: String
     //@Binding var exerciseID: String
     
     var body: some View {
         HStack {
-            NavigationLink(destination: ProgramView(programID: $programID)){
+            NavigationLink(destination: WorkoutListView(programID: $programID)){
                 Text(programName)
                 .withButtonFormatting()
         }

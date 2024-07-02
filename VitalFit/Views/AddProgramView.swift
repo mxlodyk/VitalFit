@@ -9,7 +9,6 @@ struct AddProgramView: View {
     @State private var navigateToNewProgramView = false
     
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var programListViewModel: ProgramListViewModel
     @State var newProgramName: String = ""
     @State var programName: String = ""
     //@EnvironmentObject var programModel: ProgramModel

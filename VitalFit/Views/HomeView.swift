@@ -19,6 +19,7 @@ struct HomeView: View { // Declare a structure named 'HomeView' that conforms to
                     }
                 }
         }
+        .navigationBarBackButtonHidden(true)
                 
     }
 }

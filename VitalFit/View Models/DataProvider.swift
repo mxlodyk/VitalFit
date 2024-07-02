@@ -17,8 +17,8 @@ struct DataProvider {
                 WorkoutModel(name: "Quadriceps", exercises: [])
             ]
             program1.workouts[0].exercises = [
-                ExerciseModel(name: "Hip Thrust", repetitions: "12", sets: "4", weight: "60", rest: "90"),
-                ExerciseModel(name: "Cable Kickback", repetitions: "12", sets: "4", weight: "60", rest: "90")
+                ExerciseModel(name: "Hip Thrust", repetitions: "12", sets: "4", weight: "140", rest: "120"),
+                ExerciseModel(name: "Cable Kickback", repetitions: "12", sets: "4", weight: "20", rest: "90")
             ]
             program1.workouts[1].exercises = [
                 ExerciseModel(name: "Hamstring Curl", repetitions: "12", sets: "4", weight: "60", rest: "90"),

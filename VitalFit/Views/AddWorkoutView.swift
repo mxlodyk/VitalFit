@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddWorkoutView: View {
     
-    @EnvironmentObject var workoutListViewModel: WorkoutListViewModel
     @State var textFieldText: String = ""
     @Environment(\.presentationMode) var presentationMode
     @State private var navigateToExerciseList = false

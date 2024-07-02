@@ -6,7 +6,6 @@ import SwiftUI
 
 struct ProgramListView: View {
     
-    @EnvironmentObject var programListViewModel: ProgramListViewModel
     let programs: [ProgramModel] = DataProvider.getPrograms()
     //@Binding var exerciseID: String
     //@State var selectedProgram: ProgramModel
@@ -22,8 +21,8 @@ struct ProgramListView: View {
                         ForEach(DataProvider.programs) { program in
                             ProgramListRowView(programName: program.name, programID: program.id)
                         }
-                        .onDelete(perform: programListViewModel.deleteProgram)
-                        .onMove(perform: programListViewModel.moveProgram)
+                        //.onDelete(perform: programListViewModel.deleteProgram)
+                        //.onMove(perform: programListViewModel.moveProgram)
                     }
                 }
                 .navigationBarBackButtonHidden(true)

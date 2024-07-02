@@ -6,7 +6,6 @@ import SwiftUI
 
 struct ExerciseListRowView: View {
     
-    @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     let exerciseName: String
     @State var exerciseID: String
     @Binding var programID: String
