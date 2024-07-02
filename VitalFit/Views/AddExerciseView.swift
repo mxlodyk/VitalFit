@@ -4,12 +4,9 @@
 
 import SwiftUI
 
-var program4 = ProgramModel(name: "Big 4", workouts: workouts1) // Preview
-var workout4 = WorkoutModel(name: "Legs", exercises: []) // Preview
-
 struct AddExerciseView: View {
     
-    @State private var navigateToNewWorkoutView = false
+    @State var navigateToNewWorkoutView = false
     @Environment(\.presentationMode) var presentationMode
     @Binding var newProgram: ProgramModel
     @Binding var newWorkout: WorkoutModel
@@ -80,7 +77,7 @@ struct AddExerciseView: View {
                         .padding(.leading, 20)
                         .padding(.trailing, 20)
                 })
-                NavigationLink(destination: TestView(), isActive: $navigateToNewWorkoutView){
+                NavigationLink(destination: NewWorkoutView(newProgram: newProgram, newWorkout: $newWorkout), isActive: $navigateToNewWorkoutView) {
                     EmptyView()
                 }
             }

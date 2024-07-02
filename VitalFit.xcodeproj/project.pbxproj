@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89222D2F2C33A0EA00E87D48 /* NewExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89222D2E2C33A0EA00E87D48 /* NewExerciseListView.swift */; };
 		8939261A2C067C8C003B575B /* ProgramListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893926192C067C8C003B575B /* ProgramListView.swift */; };
 		8939261E2C067D30003B575B /* ProgramListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8939261D2C067D30003B575B /* ProgramListRowView.swift */; };
 		893926212C067DD1003B575B /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893926202C067DD1003B575B /* WorkoutListView.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89222D2E2C33A0EA00E87D48 /* NewExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseListView.swift; sourceTree = "<group>"; };
 		893926192C067C8C003B575B /* ProgramListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView.swift; sourceTree = "<group>"; };
 		8939261D2C067D30003B575B /* ProgramListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListRowView.swift; sourceTree = "<group>"; };
 		893926202C067DD1003B575B /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
@@ -217,10 +219,11 @@
 				8939261D2C067D30003B575B /* ProgramListRowView.swift */,
 				893926202C067DD1003B575B /* WorkoutListView.swift */,
 				893926282C067E5C003B575B /* AddProgramView.swift */,
-				898F69812C30ED5500CA5952 /* NewProgramView.swift */,
+				89222D2E2C33A0EA00E87D48 /* NewExerciseListView.swift */,
 				8977215D2C0693B800DED12E /* WorkoutListRowView.swift */,
 				893926262C067E47003B575B /* ExerciseListView.swift */,
 				8939262A2C067E7C003B575B /* AddWorkoutView.swift */,
+				898F69812C30ED5500CA5952 /* NewProgramView.swift */,
 				898F69832C30F43F00CA5952 /* NewWorkoutView.swift */,
 				899B76682C0D383A0088FE9A /* TestView.swift */,
 			);
@@ -387,6 +390,7 @@
 				8939262B2C067E7C003B575B /* AddWorkoutView.swift in Sources */,
 				8969FEEE2AD7EA43009AD3C2 /* AddExerciseView.swift in Sources */,
 				8939261A2C067C8C003B575B /* ProgramListView.swift in Sources */,
+				89222D2F2C33A0EA00E87D48 /* NewExerciseListView.swift in Sources */,
 				8969FEE62AD7E785009AD3C2 /* HomeView.swift in Sources */,
 				8945AC8F2AD7D82A001CCE76 /* ExerciseModel.swift in Sources */,
 				899B76692C0D383A0088FE9A /* TestView.swift in Sources */,

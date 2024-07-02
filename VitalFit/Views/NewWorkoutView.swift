@@ -14,6 +14,7 @@ struct NewWorkoutView: View {
     
     @State var newProgram: ProgramModel
     @Binding var newWorkout: WorkoutModel
+    //@Binding var navigateToNewWorkoutView: Bool
     //workoutID: String
     
     var body: some View {
