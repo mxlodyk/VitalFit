@@ -7,6 +7,8 @@ import SwiftUI
 struct NewWorkoutListView: View {
     
     @Binding var newProgram: ProgramModel
+    @Binding var programID: String
+    @Binding var exerciseID: String
     //@Binding var newWorkoutListViewModel: WorkoutListViewModel
     @EnvironmentObject var workoutListViewModel: WorkoutListViewModel
     //var tempProgram: ProgramModel
@@ -38,7 +40,7 @@ struct NewWorkoutListView: View {
             VStack (spacing: 5) {
                 //Text(newProgram.name)
                 ForEach(workoutListViewModel.workouts) { workout in
-                    WorkoutListRowView(workoutName: workout.name, workoutID: workout.id)
+                    WorkoutListRowView(workoutName: workout.name, workoutID: workout.id, programID: $programID)
                 }
                     .onDelete(perform: workoutListViewModel.deleteWorkout)
                     .onMove(perform: workoutListViewModel.moveWorkout)
@@ -48,12 +50,12 @@ struct NewWorkoutListView: View {
         .navigationBarItems(
             leading: EditButton(),
             trailing:
-                NavigationLink("Add", destination: AddWorkoutView(newProgram: $newProgram))
+                NavigationLink("Add", destination: AddWorkoutView(program: $newProgram))
         )
     }
 }
 
-#Preview {
+/*#Preview {
     NavigationView{
         var previewNewProgram = ProgramModel(name: "Program", workouts: [])
         var previewNewWorkoutListViewModel = WorkoutListViewModel()
@@ -61,4 +63,4 @@ struct NewWorkoutListView: View {
         NewWorkoutListView(newProgram: .constant(previewNewProgram))
             .environmentObject(WorkoutListViewModel())
     }
-}
+}*/

@@ -13,7 +13,9 @@ struct AddWorkoutView: View {
     @State var textFieldText: String = ""
     @Environment(\.presentationMode) var presentationMode
     @State private var navigateToExerciseList = false
-    @Binding var newProgram: ProgramModel
+    
+    
+    @Binding var program: ProgramModel
     @State var newWorkout = WorkoutModel(name: "", exercises: [])
     
     var body: some View {
@@ -39,7 +41,7 @@ struct AddWorkoutView: View {
                         .cornerRadius(10)
                 }
                 
-                NavigationLink(destination: NewWorkoutView(newProgram: newProgram, newWorkout: $newWorkout), isActive: $navigateToExerciseList) {
+                NavigationLink(destination: NewWorkoutView(newProgram: program, newWorkout: $newWorkout), isActive: $navigateToExerciseList) {
                                     EmptyView()
                                 }
             }
@@ -48,20 +50,16 @@ struct AddWorkoutView: View {
         .navigationTitle("Add a Workout")
     }
     func saveButtonPressed() {
-        let programID = newProgram.id
+        let programID = program.id
         newWorkout = WorkoutModel(name: textFieldText, exercises: [])
-        //newProgram.workouts.append(newWorkout)
         DataProvider.addWorkout(programID: programID, workoutModel: newWorkout)
-        //var newWorkoutListViewModel = WorkoutListViewModel.createNewWorkoutListViewModel()
-        //workoutListViewModel.addWorkout(newWorkout: newWorkout)
-        //presentationMode.wrappedValue.dismiss()
     }
 }
 
-#Preview {
+/*#Preview {
     NavigationView {
         var previewNewProgram = ProgramModel(name: "Program", workouts: [])
         var previewNewWorkoutListViewModel = WorkoutListViewModel()
         AddWorkoutView(newProgram: .constant(previewNewProgram))
     }
-}
+}*/

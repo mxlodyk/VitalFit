@@ -8,82 +8,92 @@ var exercise2 = ExerciseModel(name: "Hip Thrusts", repetitions: "12", sets: "4",
 
 struct ExerciseView: View {
     
+    @Binding var programID: String
+    @Binding var workoutID: String
     @Binding var exerciseID: String
-    @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
+    //@EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     
     var body: some View {
         
         VStack (spacing: 80) {
-                ForEach(exerciseListViewModel.exercises) { exercise in
-                    if exercise.id == exerciseID {
-                        Text(exercise.name)
-                            .withButtonFormatting()
-                        HStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(themeColour), lineWidth: 2)
-                                .withFrameFormatting()
-                                
-                            Text(exercise.repetitions)
-                                .padding(.leading, -66)
-                                .font(.largeTitle)
-                                .foregroundColor(themeColour)
-                            Spacer()
-                            Text("REPETITIONS")
-                                .font(.headline)
-                                .padding(.trailing, 70)
-                                .foregroundColor(themeColour)
-                        }
-                        HStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(themeColour), lineWidth: 2)
-                                .frame(width: 80, height: 80)
-                                .padding(.leading, 70)
-                            Text(exercise.sets)
-                                .padding(.leading, -58)
-                                .font(.largeTitle)
-                                .foregroundColor(themeColour)
-                            Spacer()
-                            Text("SETS")
-                                .font(.headline)
-                                .padding(.trailing, 70)
-                                .foregroundColor(themeColour)
-                        }
-                        HStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(themeColour), lineWidth: 2)
-                                .frame(width: 80, height: 80)
-                                .padding(.leading, 70)
-                            Text(exercise.weight)
-                                .padding(.leading, -66)
-                                .font(.largeTitle)
-                                .foregroundColor(themeColour)
-                            Spacer()
-                            Text("KG")
-                                .font(.headline)
-                                .padding(.trailing, 70)
-                                .foregroundColor(themeColour)
-                        }
-                        HStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(themeColour), lineWidth: 2)
-                                .frame(width: 80, height: 80)
-                                .padding(.leading, 70)
-                            Text(exercise.rest)
-                                .padding(.leading, -66)
-                                .font(.largeTitle)
-                                .foregroundColor(themeColour)
-                            Spacer()
-                            Text("SEC")
-                                .font(.headline)
-                                .padding(.trailing, 70)
-                                .foregroundColor(themeColour)
-//                        Text("Timer Count \(timerCount)")
-//                                .onAppear {
-//                                    let _ = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) {
-//                                        timer in
-//                                        timerCount -= 1
-//                                    }
-//                                }
+            ForEach(DataProvider.programs) { program in
+                    if program.id == programID {
+                        ForEach(program.workouts) { workout in
+                            if workout.id == workoutID {
+                                ForEach(workout.exercises) { exercise in
+                                    if exercise.id == exerciseID {
+                                        Text(exercise.name)
+                                            .withButtonFormatting()
+                                        HStack {
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color(themeColour), lineWidth: 2)
+                                                .withFrameFormatting()
+                                            
+                                            Text(exercise.repetitions)
+                                                .padding(.leading, -66)
+                                                .font(.largeTitle)
+                                                .foregroundColor(themeColour)
+                                            Spacer()
+                                            Text("REPETITIONS")
+                                                .font(.headline)
+                                                .padding(.trailing, 70)
+                                                .foregroundColor(themeColour)
+                                        }
+                                        HStack {
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color(themeColour), lineWidth: 2)
+                                                .frame(width: 80, height: 80)
+                                                .padding(.leading, 70)
+                                            Text(exercise.sets)
+                                                .padding(.leading, -58)
+                                                .font(.largeTitle)
+                                                .foregroundColor(themeColour)
+                                            Spacer()
+                                            Text("SETS")
+                                                .font(.headline)
+                                                .padding(.trailing, 70)
+                                                .foregroundColor(themeColour)
+                                        }
+                                        HStack {
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color(themeColour), lineWidth: 2)
+                                                .frame(width: 80, height: 80)
+                                                .padding(.leading, 70)
+                                            Text(exercise.weight)
+                                                .padding(.leading, -66)
+                                                .font(.largeTitle)
+                                                .foregroundColor(themeColour)
+                                            Spacer()
+                                            Text("KG")
+                                                .font(.headline)
+                                                .padding(.trailing, 70)
+                                                .foregroundColor(themeColour)
+                                        }
+                                        HStack {
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color(themeColour), lineWidth: 2)
+                                                .frame(width: 80, height: 80)
+                                                .padding(.leading, 70)
+                                            Text(exercise.rest)
+                                                .padding(.leading, -66)
+                                                .font(.largeTitle)
+                                                .foregroundColor(themeColour)
+                                            Spacer()
+                                            Text("SEC")
+                                                .font(.headline)
+                                                .padding(.trailing, 70)
+                                                .foregroundColor(themeColour)
+                                            //                        Text("Timer Count \(timerCount)")
+                                            //                                .onAppear {
+                                            //                                    let _ = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) {
+                                            //                                        timer in
+                                            //                                        timerCount -= 1
+                                            //                                    }
+                                            //                                }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -105,7 +115,7 @@ struct ExerciseView: View {
 //        .previewLayout(.sizeThatFits)
 //}
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let exerciseListViewModel = ExerciseListViewModel()
         exerciseListViewModel.exercises = [
@@ -117,4 +127,4 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(exerciseListViewModel)
             .previewLayout(.sizeThatFits)
     }
-}
+}*/

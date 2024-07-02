@@ -8,6 +8,8 @@ struct ProgramListView: View {
     
     @EnvironmentObject var programListViewModel: ProgramListViewModel
     let programs: [ProgramModel] = DataProvider.getPrograms()
+    //@State var exerciseID: String
+    //@State var selectedProgram: ProgramModel
     
     var body: some View {
         
@@ -50,9 +52,10 @@ struct ProgramListView: View {
     }
 }
     
-    #Preview {
+   /* #Preview {
         NavigationView{
             ProgramListView()
                 .environmentObject(ProgramListViewModel())
         }
     }
+*/

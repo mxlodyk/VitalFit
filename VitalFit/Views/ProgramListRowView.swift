@@ -12,6 +12,7 @@ struct ProgramListRowView: View {
     @EnvironmentObject var programListViewModel: ProgramListViewModel
     let programName: String
     @State var programID: String
+    //@Binding var exerciseID: String
     
     var body: some View {
         HStack {
@@ -24,6 +25,6 @@ struct ProgramListRowView: View {
     }
 }
 
-#Preview {
-    ProgramListRowView(programName: program1.name, programID: program1.id)
-}
+/*#Preview {
+    ProgramListRowView(programName: program1.name, programID: program1.id, selectedProgram: selectedProgram)
+}*/

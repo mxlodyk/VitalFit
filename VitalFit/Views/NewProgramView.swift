@@ -38,7 +38,7 @@ struct NewProgramView: View {
                         .frame(width: 30, height: 30)
                 )
                 Spacer()
-                NavigationLink(destination: AddWorkoutView(newProgram: $newProgram)) {
+                NavigationLink(destination: AddWorkoutView(program: $newProgram)) {
                     Image("AddIcon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)

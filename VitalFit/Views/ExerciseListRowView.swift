@@ -11,10 +11,12 @@ struct ExerciseListRowView: View {
     @EnvironmentObject var exerciseListViewModel: ExerciseListViewModel
     let exerciseName: String
     @State var exerciseID: String
+    @Binding var programID: String
+    @Binding var workoutID: String
     
     var body: some View {
             HStack {
-                NavigationLink(destination: ExerciseView(exerciseID: $exerciseID)){
+                NavigationLink(destination: ExerciseView(programID: $programID, workoutID: $workoutID, exerciseID: $exerciseID)){
                     Text(exerciseName)
                     .withButtonFormatting()
             }
@@ -25,8 +27,8 @@ struct ExerciseListRowView: View {
     }
 }
 
-#Preview {
+/*#Preview {
     ExerciseListRowView(exerciseName: exercise1.name, exerciseID: exercise1.id)
         .environmentObject(ExerciseListViewModel())
-}
+}*/
 
